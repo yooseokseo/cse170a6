@@ -28,25 +28,40 @@
         <p>{{currentUser.userName}}</p>
       </div>
           <div class= "edit-profile">
-            Edit Profile
+            <a href="/">Edit Profile</a>
           </div>
     </div>
+
+
     <div class = "tabs_container">
       <ul class="nav nav-tabs">
-                <li class="active"><a href="#Saved" data-toggle="tab">Saved</a></li>
-                <li><a href="#Uploaded" data-toggle="tab">Uploaded</a></li>
-                <li><a href="#Shared" data-toggle="tab">Shared</a></li>
-            </ul>
+        <li class="active"><a href="#Saved" data-toggle="tab">Saved</a></li>
+        <li><a href="#Uploaded" data-toggle="tab">Uploaded</a></li>
+        <li><a href="#Shared" data-toggle="tab">Shared</a></li>
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content">
+          
+        <!-- Saved tab -->
+        <div class="tab-pane active" id="Saved">
+            <h5> <center><br>SAVED CONTENT.. </center></h5>
         </div>
-        <div class="saved-tab active" id="Saved">
-          <!-- data for saved media -->
+
+        <!-- Uploaded tab -->
+        <div class="tab-pane" id="Uploaded">
+            <h5> <center><br>UPLOADED CONTENT.. </center></h5>
+
         </div>
-        <div class="uploaded-tab active" id="Uploaded">
-          <!-- data for uploaded media -->
+
+        <!-- Shared tab -->
+        <div class="tab-pane" id="Shared">
+            <h5> <center><br>SHARED CONTENT.. </center></h5>
+
         </div>
-        <div class = "shared-tab active" id="Shared">
-          <!-- data for shared media -->
-        </div>
+
+      </div>
+    </div>
 
 
 
@@ -92,7 +107,7 @@
       </a>
 
       <!-- Search -->
-      <a href="/">
+      <a href="/search">
         <div class="search">
           <div class="nav-images">
             <img src="/images/icons/search-100.png" alt="search button">
