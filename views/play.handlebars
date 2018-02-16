@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APP</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="/css/play.css">
+  <link href="/css/profile.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/chatroom.css">
+</head>
+
+<body>
+
+  <div class="page-container">
+
+    <div class="pageTitle-container">
+        <div class="page-back">
+          <a id="back" href="/"> &lt; Back  </a>
+        </div>
+
+
+      <div class="page-title">
+        {{pageTitle}}
+      </div>
+
+
+        <div class="page-filter">
+          Filter
+        </div>
+    </div>
+
+    <div class="pageContent-container">
+      <div class="page-media">
+        <img id="media" src="{{itemURL}}" alt="">
+        <a href="/play/{{pageTitle}}/left"><img id="arrow-left" src="/images/icons/arrow-left.svg" alt=""></a>
+        <a href="/play/{{pageTitle}}/right"><img id="arrow-right" src="/images/icons/arrow-right.svg" alt=""></a>
+      </div>
+      <div id="nav-cover-top">
+
+      </div>
+      <div id="more-options">
+        <div style="bottom:9rem; height:6rem;" class="page-media-more fixed-action-btn horizontal click-to-toggle">
+          <span id="page-media-title">{{itemTitle}}</span>
+          <span id="page-madia-caption">{{caption}}</span>
+            <a id="moreBtn" class="page-media-more btn-floating btn-large red">
+              <i class="material-icons">+</i>
+            </a>
+            <ul>
+              <li><a href="/play/{{pageTitle}}/{{itemTitle}}/share" id="share-btn" class="btn-floating "><i class="material-icons">Share</i></a></li>
+              <li><a class="btn-floating darken-1 "><i class="material-icons">Save</i></a></li>
+              <li><a class="btn-floating "><i class="material-icons">Like</i></a></li>
+              <li><a href="/play/{{pageTitle}}/{{itemTitle}}/info" class="btn-floating "><i class="material-icons">Info</i></a></li>
+            </ul>
+          </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- SPACE FOR POPUP -->
+    <div id="profile_popup" class="modal"> </div>
+
+
+    <div class="nav-share-2 chatroom-btns-layout">
+        <div id="exitChatroom" class="chatroom-btns displayNone">
+          Exit Chatroom
+        </div>
+        <div id="up" class="chatroom-btns chatroom-btns-last displayNone">
+          UP
+        </div>
+      </div>
+      {{#if isScreenShared}}
+          <div class="nav-share chatroom-btns-layout">
+            <div id="exitSharing" class="chatroom-btns">
+              Exit Sharing
+            </div>
+            <div id="enterChatroom" class="chatroom-btns chatroom-btns-last">
+              Enter Chatroom
+            </div>
+          </div>
+      {{/if}}
+
+    </div>
+    <!-- BOTTOM NAVIGATION BAR -->
+
+    <div class="chat-view displayNone">
+      <iframe id="myFrame" src="https://chat-seo.herokuapp.com" width="100%" height="auto"></iframe>
+    </div>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <div class="nav-container">
+
+      <!-- Home -->
+      <a href="/">
+        <div class="home nav-divider">
+          <div class="nav-images">
+            <img src="/images/icons/home-100.png" alt="home button">
+          </div>
+          <div class="nav-title">
+            Home
+          </div>
+        </div>
+      </a>
+
+      <!-- Browse -->
+      <a href="/browse">
+        <div class="browse nav-divider">
+          <div class="nav-images">
+            <img src="/images/icons/browse-100.png" alt="browse button">
+          </div>
+          <div class="nav-title">
+            Browse
+          </div>
+        </div>
+      </a>
+
+      <!-- Profile -->
+        <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >
+          <div class="profile nav-divider">
+          <div class="nav-images">
+            <img src="/images/icons/profile-100.png" alt="profile button">
+          </div>
+          <div class="nav-title">
+            Profile
+          </div>
+        </div>
+      </a>
+
+      <!-- Search -->
+      <a href="/">
+        <div class="search">
+          <div class="nav-images">
+            <img src="/images/icons/search-100.png" alt="search button">
+          </div>
+          <div class="nav-title">
+            Search
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script src="/js/jquery-1.11.0.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/play.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+
+</html>

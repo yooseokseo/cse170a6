@@ -1,0 +1,89 @@
+<!doctype html>
+
+<div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> X </button>
+        <h4 class="modal-title" id="myModalLabel">Login/Registration</h4>
+    </div>
+    
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-11">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                    <li><a href="#Registration" data-toggle="tab">Registration</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    
+                    <!-- Login form -->
+                    <div class="tab-pane active" id="Login">
+                        <form role="form" class="form-horizontal">
+                           
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">
+                                    Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email1" placeholder="Email" />
+                                </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="exampleInputPassword1" class="col-sm-2 control-label"> Password </label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="row">
+                                <div class="col-sm-2"> </div>
+                                <div class="col-sm-10">
+                    
+                                    <!-- Submit button -->
+                                    <input type="button" class="btn btn-primary btn-sm" value="Submit" onclick="window.location.href='/preference'" />
+                                    
+                                    <!-- Forgot password -->
+                                    <a href="">Forgot password?</a>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Registration form -->
+                    <div class="tab-pane" id="Registration">
+                        <form id="addFriendForm" role="form" method="get" action="/profile_register">
+                            <div class="form-group">
+                              <label for="name">Name:</label>
+                              <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                            </div>
+
+                            <div class="form-group">
+                              <label for="email">Email:</label>
+                              <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                            </div>
+
+                            <div class="form-group">
+                              <label for="password">Password:</label>
+                              <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                            </div>
+
+                            <input type="submit" id="submitBtn" class="btn btn-default" value="Save & Continue"></input>
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+</html>

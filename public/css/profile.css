@@ -1,0 +1,63 @@
+.nav-container {
+  background-color: #DFDFDF;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "Home Brower Profile Search";
+  bottom: 0;
+  text-align: center;
+}
+
+.nav-images{
+  padding-top: 1rem;
+}
+
+.nav-images img {
+  width:2rem;
+}
+
+.nav-title {
+  font-size: 1rem;
+}
+
+.nav-divider{
+  border-right: 1px solid #efefef;
+
+}
+
+.heading-container{
+  display:grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-column-gap: 1em;
+ }
+
+.profile_pic{
+  grid-column: 1;
+  margin-top: 15px;
+  margin-left: 15px;
+ 
+}
+.username{
+  grid-column: 1;
+  margin-left: 18px;
+  font-size: larger;
+}
+.description{
+  grid-column: 2;
+  margin-top: 20px;
+  font-size: medium;
+ }
+ .edit-profile{
+   grid-column: 2;
+   text-align:right;
+   margin-right: 20px;
+   
+ }
+
+
+/* pop up css; combined into one file */
+input::-webkit-input-placeholder {
+     opacity: 0.3; /*Change opacity of placeholder text*/
+}
